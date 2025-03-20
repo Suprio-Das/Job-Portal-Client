@@ -3,6 +3,13 @@ import LoginLottie from '../../assets/Lottie/Login.json';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
+    const handleSignIn = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value
+        console.log(email, password)
+    }
     return (
         <div className='w-[80%] mx-auto my-5'>
             {/* <ToastContainer></ToastContainer> */}
@@ -13,7 +20,7 @@ const Login = () => {
                     <Lottie className='w-72' animationData={LoginLottie}></Lottie>
                 </div>
                 <div className='w-1/2'>
-                    <form>
+                    <form onSubmit={handleSignIn}>
                         <fieldset className="fieldset">
                             <legend className="fieldset-legend">Email *</legend>
                             <input type="text" className="input" name='email' required placeholder="Enter your email" />
