@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AuthContext from './AuthContext';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../../Firebase/Firebase.init';
 
 const AuthProvider = ({ children }) => {
@@ -12,6 +12,16 @@ const AuthProvider = ({ children }) => {
         setloading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
+
+    // Seting an Observer
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+            setloading(false);
+        });
+
+        return () => unsubscribe();
+    }, []);
 
     const authInfo = {
         loading,
