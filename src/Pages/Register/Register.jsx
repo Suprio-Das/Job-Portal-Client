@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import registerLottie from '../../assets/Lottie/registration.json';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../Context/AuthContext/AuthContext';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 const Register = () => {
     const { createUserWithEmail } = useContext(AuthContext);
     const [error, setError] = useState("");
@@ -24,7 +25,19 @@ const Register = () => {
             createUserWithEmail(email, password)
                 .then(result => {
                     setError('');
-                    console.log(result.user);
+                    if (result.user) {
+                        toast.success('Account created successfully', {
+                            position: "top-right",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: false,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                            transition: Bounce,
+                        });
+                    }
                 })
                 .catch(error => {
                     console.log(error.message);
@@ -33,6 +46,7 @@ const Register = () => {
     }
     return (
         <div className='w-[80%] mx-auto my-5'>
+            <ToastContainer></ToastContainer>
             <p className='text-[#3C65F5] text-center'>Register</p>
             <h1 className='text-[#05264E] text-5xl text-center font-semibold'>Start for free Today</h1>
             <div className='flex justify-between items-center'>
