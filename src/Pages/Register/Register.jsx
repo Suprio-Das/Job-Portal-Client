@@ -1,8 +1,10 @@
 import Lottie from 'lottie-react';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import registerLottie from '../../assets/Lottie/registration.json';
 import { Link } from 'react-router-dom';
+import AuthContext from '../../Context/AuthContext/AuthContext';
 const Register = () => {
+    const { createUserWithEmail } = useContext(AuthContext);
     const [error, setError] = useState("");
     const handleRegister = e => {
         e.preventDefault();
@@ -17,6 +19,16 @@ const Register = () => {
         const regex = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
         if (!regex.test(password)) {
             setError('Password must have at least 6 characters, including one letter and one number');
+        }
+        else {
+            createUserWithEmail(email, password)
+                .then(result => {
+                    setError('');
+                    console.log(result.user);
+                })
+                .catch(error => {
+                    console.log(error.message);
+                })
         }
     }
     return (
