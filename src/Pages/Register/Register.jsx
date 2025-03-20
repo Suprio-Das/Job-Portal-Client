@@ -1,8 +1,24 @@
 import Lottie from 'lottie-react';
-import React from 'react';
+import React, { useState } from 'react';
 import registerLottie from '../../assets/Lottie/registration.json';
 import { Link } from 'react-router-dom';
 const Register = () => {
+    const [error, setError] = useState("");
+    const handleRegister = e => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const photo = form.photo.value;
+        const newUser = { name, email, password, photo };
+
+        // password validation using regex
+        const regex = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
+        if (!regex.test(password)) {
+            setError('Password must have at least 6 characters, including one letter and one number');
+        }
+    }
     return (
         <div className='w-[80%] mx-auto my-5'>
             <p className='text-[#3C65F5] text-center'>Register</p>
@@ -12,7 +28,8 @@ const Register = () => {
                     <Lottie animationData={registerLottie}></Lottie>
                 </div>
                 <div className='w-1/2'>
-                    <form>
+                    <form onSubmit={handleRegister}>
+                        <p>{error}</p>
                         <fieldset className="fieldset">
                             <legend className="fieldset-legend">Full Name *</legend>
                             <input type="text" className="input" name='name' required placeholder="Suprio Das" />
@@ -23,7 +40,7 @@ const Register = () => {
                         </fieldset>
                         <fieldset className="fieldset">
                             <legend className="fieldset-legend">Password *</legend>
-                            <input type="text" className="input" name='password' required placeholder="Type a strong password" />
+                            <input type="password" className="input" name='password' required placeholder="Type a strong password" />
                         </fieldset>
                         <fieldset className="fieldset">
                             <legend className="fieldset-legend">Profile Photo URL *</legend>
