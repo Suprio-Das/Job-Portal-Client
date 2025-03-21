@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import AuthContext from './AuthContext';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from '../../Firebase/Firebase.init';
 
 const AuthProvider = ({ children }) => {
@@ -17,6 +17,11 @@ const AuthProvider = ({ children }) => {
     const signInUserWithEmail = (email, password) => {
         setloading(true);
         return signInWithEmailAndPassword(auth, email, password);
+    }
+
+    // Signout user
+    const signOutUser = () => {
+        return signOut(auth);
     }
 
     // Seting an Observer
