@@ -66,7 +66,7 @@ const Login = () => {
                             <input type="password" className="input" name='password' required placeholder="Enter your password" />
                         </fieldset>
                         {/* <p className='text-red-600'>{error}</p> */}
-                        <input type="submit" className='btn bg-[#05264E] text-white w-xs mt-4' value="Submit & Register" />
+                        <input type="submit" className='btn bg-[#05264E] text-white w-xs mt-4' value="Login & Explore" />
                         <p className='text-[14px] text-gray-500'>Don't have an account? <Link className='text-[#05264E]' to='/register'>Sign up</Link> </p>
                     </form>
                 </div>
