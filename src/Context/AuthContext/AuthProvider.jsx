@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import AuthContext from './AuthContext';
-import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Firebase/Firebase.init';
 
 const AuthProvider = ({ children }) => {
@@ -11,6 +11,12 @@ const AuthProvider = ({ children }) => {
     const createUserWithEmail = (email, password) => {
         setloading(true);
         return createUserWithEmailAndPassword(auth, email, password);
+    }
+
+    // Login user with email and password
+    const signInUserWithEmail = (email, password) => {
+        setloading(true);
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
     // Seting an Observer
@@ -26,7 +32,8 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         loading,
         user,
-        createUserWithEmail
+        createUserWithEmail,
+        signInUserWithEmail
     }
     return (
         <AuthContext.Provider value={authInfo}>
