@@ -1,9 +1,15 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../Context/AuthContext/AuthContext';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext);
+    const { user, signOutUser } = useContext(AuthContext);
+
+    // Signout user
+    const logout = () => {
+        signOutUser()
+    }
     const links = <>
         <li><a>Item 1</a></li>
         <li><a>Item 3</a></li>
@@ -33,7 +39,7 @@ const Navbar = () => {
                     {
                         user ?
                             <>
-                                <button className='btn'>Log out</button>
+                                <button onClick={logout} className='btn'>Log out</button>
                             </>
                             :
                             <>
