@@ -1,4 +1,5 @@
 import BannerImageOne from '../../assets/home_banner_1.png'
+import { motion } from "motion/react"
 const Banner = () => {
     return (
         <div className="bg-[#f2f6fd] min-h-[calc(100vh-70px)] p-11 flex items-center">
@@ -10,7 +11,14 @@ const Banner = () => {
                         applications every single day</p>
                 </div>
                 <div className='1/3'>
-                    <img src={BannerImageOne} alt="" />
+                    <motion.img
+                        animate={{ y: [70, 90, 70] }}
+                        transition={{ duration: 10, repeat: Infinity }}
+                        src={BannerImageOne} />
+                    <motion.img
+                        animate={{ x: [150, 200, 150] }}
+                        transition={{ duration: 10, repeat: Infinity }}
+                        src={BannerImageOne} className='w-2/5' />
                 </div>
             </div>
         </div>
