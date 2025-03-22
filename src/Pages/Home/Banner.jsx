@@ -1,4 +1,5 @@
 import BannerImageOne from '../../assets/home_banner_1.png'
+import BannerImageTwo from '../../assets/home_banner_2.png'
 import { motion } from "motion/react"
 const Banner = () => {
     return (
@@ -18,7 +19,7 @@ const Banner = () => {
                     <motion.img
                         animate={{ x: [150, 200, 150] }}
                         transition={{ duration: 10, repeat: Infinity }}
-                        src={BannerImageOne} className='w-2/5' />
+                        src={BannerImageTwo} className='w-3/5' />
                 </div>
             </div>
         </div>
