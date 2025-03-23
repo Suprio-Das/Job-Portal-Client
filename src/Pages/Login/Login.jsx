@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import AuthContext from '../../Context/AuthContext/AuthContext';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
+import SocialLogin from '../Shared/SocialLogin';
 
 const Login = () => {
     const { signInUserWithEmail } = useContext(AuthContext);
@@ -57,6 +58,7 @@ const Login = () => {
                 </div>
                 <div className='w-1/2'>
                     <form onSubmit={handleSignIn}>
+                        <SocialLogin></SocialLogin>
                         <fieldset className="fieldset">
                             <legend className="fieldset-legend">Email *</legend>
                             <input type="text" className="input" name='email' required placeholder="Enter your email" />
