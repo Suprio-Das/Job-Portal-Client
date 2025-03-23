@@ -4,6 +4,7 @@ import registerLottie from '../../assets/Lottie/registration.json';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../Context/AuthContext/AuthContext';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
+import SocialLogin from '../Shared/SocialLogin';
 const Register = () => {
     const { createUserWithEmail } = useContext(AuthContext);
     const [error, setError] = useState("");
@@ -67,6 +68,7 @@ const Register = () => {
                 </div>
                 <div className='w-1/2'>
                     <form onSubmit={handleRegister}>
+                        <SocialLogin></SocialLogin>
                         <fieldset className="fieldset">
                             <legend className="fieldset-legend">Full Name *</legend>
                             <input type="text" className="input" name='name' required placeholder="Suprio Das" />
