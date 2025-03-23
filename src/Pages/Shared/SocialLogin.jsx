@@ -1,6 +1,7 @@
 import { FcGoogle } from "react-icons/fc";
 
 const SocialLogin = () => {
+
     return (
         <div className="w-xs">
             <button className="flex items-center btn btn-base w-full">
