@@ -1,10 +1,26 @@
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
+import AuthContext from "../../Context/AuthContext/AuthContext";
+import { toast } from "react-toastify";
 
 const SocialLogin = () => {
-
+    const { signInWithGoogle } = useContext(AuthContext);
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+            .then(result => {
+                if (result.user) {
+                    toast.success('Login Successfull.');
+                }
+            })
+            .catch(error => {
+                if (error.message) {
+                    toast.error(error.message);
+                }
+            })
+    }
     return (
         <div className="w-xs">
-            <button className="flex items-center btn btn-base w-full">
+            <button className="flex items-center btn btn-base w-full" onClick={handleGoogleLogin}>
                 <FcGoogle className="text-lg" /> Sign in with Google
             </button>
             <div className="divider">OR</div>
