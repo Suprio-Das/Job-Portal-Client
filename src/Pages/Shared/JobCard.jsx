@@ -9,7 +9,7 @@ const JobCard = ({ job }) => {
                 <img src={company_logo} alt="Company Logo" className="w-10 h-10" />
                 <div>
                     <h3 className="text-lg font-semibold">{company}</h3>
-                    <p className="text-sm text-gray-500 flex items-center gap-0.5"><IoLocationSharp /> {location}</p>
+                    <p className="text-[12px] text-gray-500 flex items-center gap-0.5"><IoLocationSharp /> {location}</p>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@ const JobCard = ({ job }) => {
 
             <div className="mt-auto flex justify-between items-center">
                 <p className="text-[#3c65f5] text-lg font-bold">
-                    <span className="text-sm font-semibold text-gray-600">{salaryRange.min}-{salaryRange.max} {salaryRange.currency}</span></p>
+                    <span className="text-xs font-semibold text-gray-600">{salaryRange.min}-{salaryRange.max} {salaryRange.currency}</span></p>
                 <button className="bg-[#e0e6f7] text-[#3c65f5] text-sm px-3 py-2 rounded-sm cursor-pointer hover:bg-blue-700 hover:text-white transition">Apply Now</button>
             </div>
         </div>
