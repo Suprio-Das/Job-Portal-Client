@@ -1,23 +1,22 @@
 import React from 'react';
 
 const JobCard = ({ job }) => {
-    const { _id, title, company_logo, location, jobType, description, requirements, salaryRange } = job;
+    const { _id, title, company, company_logo, location, jobType, description, requirements, salaryRange } = job;
     return (
         <div className="max-w-sm bg-[#f8faff] rounded-2xl p-6 border border-gray-200 hover:bg-white">
             <div className="flex items-center gap-3 mb-3">
                 <img src="https://i.ibb.co/T1XRmbX/linkedin.png" alt="Company Logo" className="w-10 h-10" />
                 <div>
-                    <h3 className="text-lg font-semibold">LinkedIn</h3>
-                    <p className="text-sm text-gray-500">New York, US</p>
+                    <h3 className="text-lg font-semibold">{company}</h3>
+                    <p className="text-sm text-gray-500">{location}</p>
                 </div>
             </div>
 
-            <h2 className="text-lg font-bold mb-2">UI / UX Designer Fulltime</h2>
-            <p className="text-sm text-gray-500 mb-2"> Fulltime · 4 minutes ago</p>
+            <h2 className="text-lg font-bold mb-2">{title}</h2>
+            <p className="text-sm text-gray-500 mb-2">{jobType}</p>
 
             <p className="text-gray-600 mb-3 py-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto
-                eveniet, dolor quo repellendus pariatur.
+                {description.split(" ").slice(0, 15).join(" ")}...
             </p>
 
             <div className="flex gap-2 mb-4">
