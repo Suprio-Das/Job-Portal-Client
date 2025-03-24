@@ -13,7 +13,7 @@ const JobCard = ({ job }) => {
             </div>
 
             <h2 className="text-lg font-bold mb-2">{title}</h2>
-            <p className="text-sm text-gray-500 mb-2 flex items-center"><IoBagCheckOutline></IoBagCheckOutline> {jobType}</p>
+            <p className="text-sm text-gray-500 mb-2 flex items-center gap-0.5"><IoBagCheckOutline></IoBagCheckOutline> {jobType}</p>
 
             <p className="text-gray-600 mb-3 py-3">
                 {description.split(" ").slice(0, 15).join(" ")}...
