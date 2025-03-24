@@ -27,8 +27,7 @@ const JobCard = ({ job }) => {
 
             <div className="flex justify-between items-center">
                 <p className="text-[#3c65f5] text-lg font-bold">
-                    <span className="text-2xl">$500</span>
-                    <span className="text-xs font-normal text-gray-600">/Hour</span></p>
+                    <span className="text-xs font-normal text-gray-600">{salaryRange.min}-{salaryRange.max} {salaryRange.currency}</span></p>
                 <button className="bg-[#e0e6f7] text-[#3c65f5] text-sm px-3 py-2 rounded-sm cursor-pointer hover:bg-blue-700 hover:text-white transition">Apply Now</button>
             </div>
         </div>
