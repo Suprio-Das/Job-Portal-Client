@@ -3,7 +3,7 @@ import { IoBagCheckOutline } from "react-icons/io5";
 const JobCard = ({ job }) => {
     const { _id, title, company, company_logo, location, jobType, description, requirements, salaryRange } = job;
     return (
-        <div className="max-w-sm bg-[#f8faff] rounded-2xl p-6 border border-gray-200 hover:bg-white">
+        <div className="max-w-sm bg-[#f8faff] rounded-2xl p-6 border border-gray-200 hover:bg-white flex flex-col">
             <div className="flex items-center gap-3 mb-3">
                 <img src={company_logo} alt="Company Logo" className="w-10 h-10" />
                 <div>
@@ -25,7 +25,7 @@ const JobCard = ({ job }) => {
                 }
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="mt-auto flex justify-between items-center">
                 <p className="text-[#3c65f5] text-lg font-bold">
                     <span className="text-xs font-normal text-gray-600">{salaryRange.min}-{salaryRange.max} {salaryRange.currency}</span></p>
                 <button className="bg-[#e0e6f7] text-[#3c65f5] text-sm px-3 py-2 rounded-sm cursor-pointer hover:bg-blue-700 hover:text-white transition">Apply Now</button>
