@@ -1,4 +1,5 @@
 import { IoBagCheckOutline } from "react-icons/io5";
+import { IoLocationSharp } from "react-icons/io5";
 
 const JobCard = ({ job }) => {
     const { _id, title, company, company_logo, location, jobType, description, requirements, salaryRange } = job;
@@ -8,7 +9,7 @@ const JobCard = ({ job }) => {
                 <img src={company_logo} alt="Company Logo" className="w-10 h-10" />
                 <div>
                     <h3 className="text-lg font-semibold">{company}</h3>
-                    <p className="text-sm text-gray-500">{location}</p>
+                    <p className="text-sm text-gray-500 flex items-center gap-0.5"><IoLocationSharp /> {location}</p>
                 </div>
             </div>
 

@@ -8,7 +8,7 @@ const Home = () => {
         fetch('http://localhost:5000/jobs')
             .then(res => res.json())
             .then(data => {
-                setJobs(data);
+                setJobs(data.slice(0, 8));
             })
     }, [])
     return (
