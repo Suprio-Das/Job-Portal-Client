@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from './Banner';
 import TopJobs from './TopJobs';
 
 const Home = () => {
+    const [jobs, setJobs] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/jobs')
+            .then(res => res.json())
+            .then(data => {
+                setJobs(data);
+            })
+    }, [])
     return (
         <div>
             <Banner></Banner>
@@ -12,10 +20,9 @@ const Home = () => {
                     <p className='lg:text-lg text-gray-500 text-center'>Search and connect with the right candidates faster.</p>
                 </div>
                 <div className='grid grid-cols-4 gap-5'>
-                    <TopJobs></TopJobs>
-                    <TopJobs></TopJobs>
-                    <TopJobs></TopJobs>
-                    <TopJobs></TopJobs>
+                    {
+                        jobs.map(job => <TopJobs key={job._id} job={job}></TopJobs>)
+                    }
                 </div>
             </div>
         </div>
