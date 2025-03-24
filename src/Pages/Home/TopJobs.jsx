@@ -1,10 +1,9 @@
-import React from 'react';
+import { IoBagCheckSharp } from "react-icons/io5";
+import JobCard from "../Shared/JobCard";
 
 const TopJobs = () => {
     return (
-        <div>
-            <h1>Top jobs are here.</h1>
-        </div>
+        <JobCard></JobCard>
     );
 };
 

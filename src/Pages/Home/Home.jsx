@@ -6,7 +6,12 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <TopJobs></TopJobs>
+            <div className='w-[90%] mx-auto grid grid-cols-4 gap-5'>
+                <TopJobs></TopJobs>
+                <TopJobs></TopJobs>
+                <TopJobs></TopJobs>
+                <TopJobs></TopJobs>
+            </div>
         </div>
     );
 };
