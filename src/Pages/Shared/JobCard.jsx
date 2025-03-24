@@ -3,7 +3,7 @@ import { IoBagCheckOutline } from "react-icons/io5";
 const JobCard = ({ job }) => {
     const { _id, title, company, company_logo, location, jobType, description, requirements, salaryRange } = job;
     return (
-        <div className="max-w-sm bg-[#f8faff] rounded-2xl p-6 border border-gray-200 hover:bg-white flex flex-col hover:-translate-y-1 transition">
+        <div className="max-w-sm bg-[#f8faff] rounded-2xl p-6 border border-gray-200 hover:bg-white flex flex-col hover:-translate-y-3.5 transition">
             <div className="flex items-center gap-3 mb-3">
                 <img src={company_logo} alt="Company Logo" className="w-10 h-10" />
                 <div>
