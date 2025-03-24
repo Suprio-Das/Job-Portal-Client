@@ -1,6 +1,7 @@
 import React from 'react';
 
-const JobCard = () => {
+const JobCard = ({ job }) => {
+    const { _id, title, company_logo, location, jobType, description, requirements, salaryRange } = job;
     return (
         <div className="max-w-sm bg-[#f8faff] rounded-2xl p-6 border border-gray-200 hover:bg-white">
             <div className="flex items-center gap-3 mb-3">

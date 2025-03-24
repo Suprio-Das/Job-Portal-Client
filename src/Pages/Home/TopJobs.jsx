@@ -1,9 +1,9 @@
 import { IoBagCheckSharp } from "react-icons/io5";
 import JobCard from "../Shared/JobCard";
 
-const TopJobs = () => {
+const TopJobs = ({ job }) => {
     return (
-        <JobCard></JobCard>
+        <JobCard job={job}></JobCard>
     );
 };
 
