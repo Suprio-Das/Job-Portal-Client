@@ -5,7 +5,7 @@ const JobCard = ({ job }) => {
     return (
         <div className="max-w-sm bg-[#f8faff] rounded-2xl p-6 border border-gray-200 hover:bg-white">
             <div className="flex items-center gap-3 mb-3">
-                <img src="https://i.ibb.co/T1XRmbX/linkedin.png" alt="Company Logo" className="w-10 h-10" />
+                <img src={company_logo} alt="Company Logo" className="w-10 h-10" />
                 <div>
                     <h3 className="text-lg font-semibold">{company}</h3>
                     <p className="text-sm text-gray-500">{location}</p>
