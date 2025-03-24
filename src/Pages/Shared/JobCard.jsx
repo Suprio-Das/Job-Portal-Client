@@ -19,10 +19,10 @@ const JobCard = ({ job }) => {
                 {description.split(" ").slice(0, 15).join(" ")}...
             </p>
 
-            <div className="flex gap-2 mb-4">
-                <span className="px-2 py-1 text-xs bg-[#e0e6f7] text-gray-700 rounded-lg hover:bg-[#3c65f5] hover:text-white transition">Adobe XD</span>
-                <span className="px-2 py-1 text-xs bg-[#e0e6f7] text-gray-700 rounded-lg hover:bg-[#3c65f5] hover:text-white transition">Figma</span>
-                <span className="px-2 py-1 text-xs bg-[#e0e6f7] text-gray-700 rounded-lg hover:bg-[#3c65f5] hover:text-white transition">Photoshop</span>
+            <div className="flex flex-wrap gap-2 mb-4">
+                {
+                    requirements.map(requirement => <span className="px-2 py-1 text-xs bg-[#e0e6f7] text-gray-700 rounded-lg  hover:bg-[#3c65f5] hover:text-white transition">{requirement}</span>)
+                }
             </div>
 
             <div className="flex justify-between items-center">
