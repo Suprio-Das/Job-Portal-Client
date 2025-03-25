@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import { BsBagCheck } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5"
 import { GoVerified } from "react-icons/go";
+import { CiCircleList } from "react-icons/ci";
 
 const JobDetails = () => {
     const singleJob = useLoaderData();
@@ -32,11 +33,11 @@ const JobDetails = () => {
                         <h1 className='text-[#05264e] text-2xl font-semibold'>Employment Information</h1>
                         <div className='divider -mt-0.1'></div>
                         <div>
-                            {/* Job Key Info-01 */}
+                            {/* Job Key Info */}
                             <div className='grid lg:grid-cols-2 gap-6'>
-                                <div className='flex items-start gap-2'>
+                                <div className='flex items-start gap-5'>
                                     <div>
-                                        <p className='font-semibold'>Category</p>
+                                        <p className='font-semibold flex items-center gap-0.5'><CiCircleList /> Category</p>
                                     </div>
                                     <div>
                                         <p>{singleJob.category}</p>
