@@ -23,6 +23,20 @@ const JobDetails = () => {
                 <button className='btn bg-[#3c65f5] text-white'><GoVerified /> Apply now</button>
             </div>
             <div className='divider my-8'></div>
+            {/* Job Details */}
+            <div className='grid lg:grid-cols-3 grid-cols-1 gap-5'>
+                {/* Job Details */}
+                <div className='col-span-2 border-2'>
+                    {/* Employment Information */}
+                    <div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                {/* Sidebar Information */}
+                <div className='col-span-1 border-2'>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
         </div>
     );
 };
