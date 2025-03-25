@@ -1,9 +1,13 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const JobDetails = () => {
+    const singleJob = useLoaderData();
     return (
         <div>
-            This is job details.
+            {
+                singleJob.title
+            }
         </div>
     );
 };
