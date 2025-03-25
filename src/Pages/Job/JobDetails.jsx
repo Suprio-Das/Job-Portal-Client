@@ -25,15 +25,28 @@ const JobDetails = () => {
             <div className='divider my-8'></div>
             {/* Job Details */}
             <div className='grid lg:grid-cols-3 grid-cols-1 gap-5'>
-                {/* Job Details */}
+                {/* Job Details Left Layout */}
                 <div className='col-span-2'>
                     {/* Employment Information */}
                     <div className='border-1 p-5 border-gray-300'>
                         <h1 className='text-[#05264e] text-2xl font-semibold'>Employment Information</h1>
                         <div className='divider -mt-0.1'></div>
+                        <div>
+                            {/* Job Key Info-01 */}
+                            <div className='grid lg:grid-cols-2 gap-6'>
+                                <div className='flex items-start gap-2'>
+                                    <div>
+                                        <p className='font-semibold'>Category</p>
+                                    </div>
+                                    <div>
+                                        <p>{singleJob.category}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                {/* Sidebar Information */}
+                {/* Right Sidebar Information */}
                 <div className='col-span-1 border-2'>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
