@@ -33,7 +33,7 @@ const JobDetails = () => {
                 {/* Job Details Left Layout */}
                 <div className='col-span-2'>
                     {/* Employment Information */}
-                    <div className='border-1 p-5 border-gray-300'>
+                    <div className='border-1 p-5 border-gray-300 rounded-xl'>
                         <h1 className='text-[#05264e] text-2xl font-semibold'>Employment Information</h1>
                         <div className='divider -mt-0.1'></div>
                         <div>
