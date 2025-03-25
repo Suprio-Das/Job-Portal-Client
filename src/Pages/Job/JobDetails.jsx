@@ -98,6 +98,10 @@ const JobDetails = () => {
                             </div>
                         </div>
                     </div>
+                    {/* Job Description */}
+                    <div className='mt-8'>
+                        <h1 className='text-2xl'>Welcome to <span className='text-[#05264e] font-semibold'>{singleJob.company}</span> Team,</h1>
+                    </div>
                 </div>
                 {/* Right Sidebar Information */}
                 <div className='col-span-1 border-2'>
