@@ -84,7 +84,15 @@ const JobDetails = () => {
                                         <p className='font-semibold flex items-center gap-0.5'><IoLocationOutline /> Status</p>
                                     </div>
                                     <div>
-                                        <p>{singleJob.GrStatusInfo}</p>
+                                        <p>
+                                            {
+                                                singleJob.status === 'active'
+                                                    ?
+                                                    <span className='text-green-600'>Available</span>
+                                                    :
+                                                    <span className='text-red-600'>Not Available</span>
+                                            }
+                                        </p>
                                     </div>
                                 </div>
                             </div>
