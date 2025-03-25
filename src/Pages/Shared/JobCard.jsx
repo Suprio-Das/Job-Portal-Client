@@ -1,5 +1,6 @@
 import { IoBagCheckOutline } from "react-icons/io5";
 import { IoLocationSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const JobCard = ({ job }) => {
     const { _id, title, company, company_logo, location, jobType, description, requirements, salaryRange } = job;
@@ -29,7 +30,9 @@ const JobCard = ({ job }) => {
             <div className="mt-auto flex justify-between items-center">
                 <p className="text-[#3c65f5] text-lg font-bold">
                     <span className="text-xs font-semibold text-gray-600">{salaryRange.min}-{salaryRange.max} {salaryRange.currency}</span></p>
-                <button className="bg-[#e0e6f7] text-[#3c65f5] text-sm px-3 py-2 rounded-sm cursor-pointer hover:bg-blue-700 hover:text-white transition">Apply Now</button>
+                <Link to={`/jobs/${_id}`}>
+                    <button className="bg-[#e0e6f7] text-[#3c65f5] text-sm px-3 py-2 rounded-sm cursor-pointer hover:bg-blue-700 hover:text-white transition">Apply</button>
+                </Link>
             </div>
         </div>
     );
