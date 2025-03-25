@@ -11,6 +11,7 @@ import { GrStatusInfo } from "react-icons/gr";
 
 const JobDetails = () => {
     const singleJob = useLoaderData();
+    const responsibilities = singleJob.responsibilities;
     return (
         <div className='w-[90%] mx-auto'>
             <div>
@@ -101,6 +102,19 @@ const JobDetails = () => {
                     {/* Job Description */}
                     <div className='mt-8'>
                         <h1 className='text-2xl'>Welcome to <span className='text-[#05264e] font-semibold'>{singleJob.company}</span> Team,</h1>
+                        <p className='my-3'>
+                            {singleJob.description}
+                        </p>
+                        <h1 className='text-2xl text-[#05264e] font-semibold mt-8'>Responsibilities</h1>
+                        <ul className="space-y-2">
+                            {responsibilities.map((res, index) => (
+                                <li key={index} className="flex items-start gap-2 text-gray-700 mt-3">
+                                    <span className="text-[#3c65f5] text-lg">✔</span>
+                                    <span>{res}</span>
+                                </li>
+                            ))}
+                        </ul>
+
                     </div>
                 </div>
                 {/* Right Sidebar Information */}
