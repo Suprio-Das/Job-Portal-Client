@@ -22,6 +22,7 @@ const JobDetails = () => {
                 </div>
                 <button className='btn bg-[#3c65f5] text-white'><GoVerified /> Apply now</button>
             </div>
+            <div className='divider my-8'></div>
         </div>
     );
 };
