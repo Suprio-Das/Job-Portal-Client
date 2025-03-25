@@ -26,10 +26,11 @@ const JobDetails = () => {
             {/* Job Details */}
             <div className='grid lg:grid-cols-3 grid-cols-1 gap-5'>
                 {/* Job Details */}
-                <div className='col-span-2 border-2'>
+                <div className='col-span-2'>
                     {/* Employment Information */}
-                    <div>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                    <div className='border-1 p-5 border-gray-300'>
+                        <h1 className='text-[#05264e] text-2xl font-semibold'>Employment Information</h1>
+                        <div className='divider -mt-0.1'></div>
                     </div>
                 </div>
                 {/* Sidebar Information */}
