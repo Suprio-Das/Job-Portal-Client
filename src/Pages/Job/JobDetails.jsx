@@ -4,6 +4,7 @@ import { BsBagCheck } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5"
 import { GoVerified } from "react-icons/go";
 import { CiCircleList } from "react-icons/ci";
+import { MdOutlineAttachMoney } from "react-icons/md";
 
 const JobDetails = () => {
     const singleJob = useLoaderData();
@@ -41,6 +42,14 @@ const JobDetails = () => {
                                     </div>
                                     <div>
                                         <p>{singleJob.category}</p>
+                                    </div>
+                                </div>
+                                <div className='flex items-start gap-5'>
+                                    <div>
+                                        <p className='font-semibold flex items-center gap-0.5'><MdOutlineAttachMoney /> Salary</p>
+                                    </div>
+                                    <div>
+                                        <p>{singleJob.salaryRange.min}-{singleJob.salaryRange.max} {singleJob.salaryRange.currency}</p>
                                     </div>
                                 </div>
                             </div>
