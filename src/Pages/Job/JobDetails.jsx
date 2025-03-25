@@ -70,6 +70,14 @@ const JobDetails = () => {
                                         <p>{singleJob.applicationDeadline}</p>
                                     </div>
                                 </div>
+                                <div className='flex items-start gap-5'>
+                                    <div>
+                                        <p className='font-semibold flex items-center gap-0.5'><IoLocationOutline /> Location</p>
+                                    </div>
+                                    <div>
+                                        <p>{singleJob.location}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
