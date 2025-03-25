@@ -8,9 +8,16 @@ const Home = () => {
         fetch('http://localhost:5000/jobs')
             .then(res => res.json())
             .then(data => {
-                setJobs(data.slice(0, 8));
+                const today = new Date().setHours(0, 0, 0, 0);
+
+                const upcomingJobs = data.filter(job => {
+                    const jobDeadline = new Date(job.applicationDeadline).setHours(0, 0, 0, 0);
+                    return jobDeadline >= today;
+                });
+
+                setJobs(upcomingJobs.slice(0, 8));
             })
-    }, [])
+    }, []);
     return (
         <div>
             <Banner></Banner>
