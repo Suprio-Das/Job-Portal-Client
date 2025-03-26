@@ -114,7 +114,12 @@ const JobDetails = () => {
                                 </li>
                             ))}
                         </ul>
-
+                        <h1 className='text-2xl text-[#05264e] font-semibold mt-8'>Requirements</h1>
+                        {
+                            singleJob.requirements.map((requirement, index) => (
+                                <button key={index} className='btn mr-3 mt-2 hover:bg-green-500 hover:text-white transition'>{requirement}</button>
+                            ))
+                        }
                     </div>
                 </div>
                 {/* Right Sidebar Information */}
