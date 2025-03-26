@@ -7,14 +7,13 @@ const PrivateRoutes = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
     // Getting previous location
     const location = useLocation();
-    console.log(location);
     if (loading) {
         return <Loader></Loader>
     }
     if (user) {
         return children;
     }
-    return <Navigate to='/login' state={location}></Navigate>
+    return <Navigate to='/login' state={location?.pathname}></Navigate>
 };
 
 export default PrivateRoutes;
