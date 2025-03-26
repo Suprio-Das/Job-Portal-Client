@@ -1,6 +1,6 @@
 import Lottie from 'lottie-react';
 import LoginLottie from '../../assets/Lottie/Login.json';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import AuthContext from '../../Context/AuthContext/AuthContext';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
@@ -8,6 +8,9 @@ import SocialLogin from '../Shared/SocialLogin';
 
 const Login = () => {
     const { signInUserWithEmail } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state || '/';
     const handleSignIn = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -29,6 +32,7 @@ const Login = () => {
                         theme: "light",
                         transition: Bounce,
                     });
+                    navigate(from)
                 }
             })
             .catch(error => {
