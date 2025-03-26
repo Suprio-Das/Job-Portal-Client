@@ -12,6 +12,8 @@ import { GrStatusInfo } from "react-icons/gr";
 const JobDetails = () => {
     const singleJob = useLoaderData();
     const responsibilities = singleJob.responsibilities;
+    const today = new Date().setHours(0, 0, 0, 0);
+    const isJobExpired = new Date(singleJob.applicationDeadline).setHours(0, 0, 0, 0) < today;
     return (
         <div className='w-[90%] mx-auto'>
             <div>
@@ -26,7 +28,7 @@ const JobDetails = () => {
                         <p className='text-xs flex items-center gap-0.2'><IoLocationOutline /> {singleJob.location}</p>
                     </div>
                 </div>
-                <button className='btn bg-[#3c65f5] hover:bg-[#05264e] hover:-translate-y-0.5 transition text-white'><GoVerified /> Apply now</button>
+                <button className={`btn bg-[#3c65f5] hover:bg-[#05264e] hover:-translate-y-0.5 transition text-white ${isJobExpired ? 'cursor-not-allowed' : ''}`} disabled={isJobExpired}><GoVerified /> Apply now</button>
             </div>
             <div className='divider my-8'></div>
             {/* Job Details */}
