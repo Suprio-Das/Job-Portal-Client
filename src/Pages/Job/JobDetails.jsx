@@ -26,7 +26,7 @@ const JobDetails = () => {
                         <p className='text-xs flex items-center gap-0.2'><IoLocationOutline /> {singleJob.location}</p>
                     </div>
                 </div>
-                <button className='btn bg-[#3c65f5] text-white'><GoVerified /> Apply now</button>
+                <button className='btn bg-[#3c65f5] hover:bg-[#05264e] hover:-translate-y-0.5 transition text-white'><GoVerified /> Apply now</button>
             </div>
             <div className='divider my-8'></div>
             {/* Job Details */}
