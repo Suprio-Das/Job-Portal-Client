@@ -23,7 +23,7 @@ const JobDetails = () => {
                     <h1 className='text-[#05264e] text-3xl font-semibold'>{singleJob.title}</h1>
                     <div className='flex gap-4'>
                         <p className='text-xs flex items-center gap-0.5'><BsBagCheck /> {singleJob.jobType}</p>
-                        <p className='text-xs flex items-center gap-0.2'><IoLocationOutline /> {singleJob.jobType}</p>
+                        <p className='text-xs flex items-center gap-0.2'><IoLocationOutline /> {singleJob.location}</p>
                     </div>
                 </div>
                 <button className='btn bg-[#3c65f5] text-white'><GoVerified /> Apply now</button>
@@ -117,7 +117,7 @@ const JobDetails = () => {
                         <h1 className='text-2xl text-[#05264e] font-semibold mt-8'>Requirements</h1>
                         {
                             singleJob.requirements.map((requirement, index) => (
-                                <button key={index} className='btn mr-3 mt-2 hover:bg-green-500 hover:text-white transition'>{requirement}</button>
+                                <button key={index} className='btn mr-3 mt-2 hover:bg-[#05264e] hover:text-white transition'>{requirement}</button>
                             ))
                         }
                     </div>
