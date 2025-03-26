@@ -147,7 +147,7 @@ const JobDetails = () => {
                         {/* Recruiter Info */}
                         <div>
                             <h1 className='text-[#05264e] text-lg text-center font-semibold'>Recruiter Information</h1>
-                            <div className='text-center text-sm mt-2'>
+                            <div className='text-center text-sm mt-2 mb-4.5'>
                                 <p>{singleJob.hr_name}</p>
                                 <p>{singleJob.hr_email}</p>
                             </div>
