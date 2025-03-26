@@ -132,7 +132,8 @@ const JobDetails = () => {
                 </div>
                 {/* Right Sidebar Information */}
                 <div className='col-span-1'>
-                    <div className='border-1 border-gray-300 rounded-xl'>
+                    <div className='border-1 border-gray-300 rounded-xl p-2'>
+                        {/* Company Info */}
                         <div className='flex items-center justify-start gap-8 p-3'>
                             <div>
                                 <img src={singleJob.company_logo} className='border-1 p-1 border-gray-300 rounded-md' alt="" />
@@ -140,6 +141,15 @@ const JobDetails = () => {
                             <div>
                                 <h1 className='text-[#05264e] text-2xl font-semibold'>{singleJob.company}</h1>
                                 <p className='flex items-center'><IoLocationOutline />{singleJob.location}</p>
+                            </div>
+                        </div>
+                        <div className='divider w-xs mx-auto'></div>
+                        {/* Recruiter Info */}
+                        <div>
+                            <h1 className='text-[#05264e] text-lg text-center font-semibold'>Recruiter Information</h1>
+                            <div className='text-center text-sm mt-2'>
+                                <p>{singleJob.hr_name}</p>
+                                <p>{singleJob.hr_email}</p>
                             </div>
                         </div>
                     </div>
