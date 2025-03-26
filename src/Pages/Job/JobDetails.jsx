@@ -131,8 +131,18 @@ const JobDetails = () => {
                     </div>
                 </div>
                 {/* Right Sidebar Information */}
-                <div className='col-span-1 border-2'>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                <div className='col-span-1'>
+                    <div className='border-1 border-gray-400 rounded-xl'>
+                        <div className='flex items-center justify-start gap-8 p-3'>
+                            <div>
+                                <img src={singleJob.company_logo} className='border-1 p-1 border-gray-300 rounded-md' alt="" />
+                            </div>
+                            <div>
+                                <h1 className='text-[#05264e] text-2xl font-semibold'>{singleJob.company}</h1>
+                                <p className='flex items-center'><IoLocationOutline />{singleJob.location}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
