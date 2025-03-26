@@ -132,7 +132,7 @@ const JobDetails = () => {
                 </div>
                 {/* Right Sidebar Information */}
                 <div className='col-span-1'>
-                    <div className='border-1 border-gray-400 rounded-xl'>
+                    <div className='border-1 border-gray-300 rounded-xl'>
                         <div className='flex items-center justify-start gap-8 p-3'>
                             <div>
                                 <img src={singleJob.company_logo} className='border-1 p-1 border-gray-300 rounded-md' alt="" />
