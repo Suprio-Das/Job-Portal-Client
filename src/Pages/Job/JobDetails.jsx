@@ -28,7 +28,7 @@ const JobDetails = () => {
                         <p className='text-xs flex items-center gap-0.2'><IoLocationOutline /> {singleJob.location}</p>
                     </div>
                 </div>
-                <button className={`btn bg-[#3c65f5] hover:bg-[#05264e] hover:-translate-y-0.5 transition text-white ${isJobExpired ? 'cursor-not-allowed' : ''}`} disabled={isJobExpired}><GoVerified /> Apply now</button>
+                <Link to={`/jobApply/${singleJob._id}`} className={`btn bg-[#3c65f5] hover:bg-[#05264e] hover:-translate-y-0.5 transition text-white ${isJobExpired ? 'cursor-not-allowed' : ''}`} disabled={isJobExpired}><GoVerified /> Apply now</Link>
             </div>
             <div className='divider my-8'></div>
             {/* Job Details */}
@@ -123,7 +123,7 @@ const JobDetails = () => {
                             ))
                         }
                         <div className='mt-8'>
-                            <button className={`btn bg-[#3c65f5] w-42 hover:bg-[#05264e] hover:-translate-y-0.5 transition text-white ${isJobExpired ? 'cursor-not-allowed' : ''}`} disabled={isJobExpired}><GoVerified /> Apply now</button>
+                            <Link to={`/jobApply/${singleJob._id}`} className={`btn bg-[#3c65f5] w-42 hover:bg-[#05264e] hover:-translate-y-0.5 transition text-white ${isJobExpired ? 'cursor-not-allowed' : ''}`} disabled={isJobExpired}><GoVerified /> Apply now</Link>
                             <Link to='/' className='btn bg-white w-42 text-black ms-5'>
                                 <IoArrowBackCircleOutline /> Back
                             </Link>
