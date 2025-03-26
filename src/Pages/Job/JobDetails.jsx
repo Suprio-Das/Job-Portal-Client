@@ -1,5 +1,5 @@
 import JobThumb from '../../assets/job_details_thumb.png';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { BsBagCheck } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5"
 import { GoVerified } from "react-icons/go";
@@ -7,7 +7,7 @@ import { CiCircleList } from "react-icons/ci";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { FaLaptopCode } from "react-icons/fa";
 import { CiCalendarDate } from "react-icons/ci";
-import { GrStatusInfo } from "react-icons/gr";
+import { IoArrowBackCircleOutline } from "react-icons/io5";
 
 const JobDetails = () => {
     const singleJob = useLoaderData();
@@ -122,6 +122,12 @@ const JobDetails = () => {
                                 <button key={index} className='btn mr-3 mt-2 hover:bg-[#05264e] hover:text-white transition'>{requirement}</button>
                             ))
                         }
+                        <div className='mt-8'>
+                            <button className={`btn bg-[#3c65f5] w-42 hover:bg-[#05264e] hover:-translate-y-0.5 transition text-white ${isJobExpired ? 'cursor-not-allowed' : ''}`} disabled={isJobExpired}><GoVerified /> Apply now</button>
+                            <Link to='/' className='btn bg-white w-42 text-black ms-5'>
+                                <IoArrowBackCircleOutline /> Back
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 {/* Right Sidebar Information */}
