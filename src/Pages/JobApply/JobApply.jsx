@@ -8,6 +8,14 @@ const JobApply = () => {
                     <h1 className='text-[#05264e] text-3xl font-semibold'>Job Application</h1>
                     <p>Apply and get a chance to Boost your career.</p>
                 </div>
+
+                {/*------------------------------Application Form------------------------------*/}
+                <form className='flex justify-center mt-5'>
+                    <fieldset className="fieldset w-1/2">
+                        <legend className="fieldset-legend">Linkedin</legend>
+                        <input type="text" className="input w-full" name='linkedin' placeholder="Linkedin Profile URL" />
+                    </fieldset>
+                </form>
             </div>
         </div>
     );
