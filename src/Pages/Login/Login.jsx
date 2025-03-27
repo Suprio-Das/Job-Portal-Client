@@ -61,8 +61,8 @@ const Login = () => {
                     <Lottie className='w-72' animationData={LoginLottie}></Lottie>
                 </div>
                 <div className='w-1/2'>
+                    <SocialLogin></SocialLogin>
                     <form onSubmit={handleSignIn}>
-                        <SocialLogin></SocialLogin>
                         <fieldset className="fieldset">
                             <legend className="fieldset-legend">Email *</legend>
                             <input type="text" className="input" name='email' required placeholder="Enter your email" />

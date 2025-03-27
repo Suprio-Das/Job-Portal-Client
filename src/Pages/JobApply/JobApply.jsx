@@ -4,15 +4,13 @@ import { FaBook } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
 
 const JobApply = () => {
-    const { id } = useParams();
+    const id = useParams();
     const handleJobApplication = e => {
         e.preventDefault();
         const form = e.target;
         const linkedin = form.linkedin.value;
         const github = form.github.value;
         const resume = form.resume.value;
-        const newApplication = { linkedin, github, resume };
-        console.log(newApplication);
     }
     return (
         <div className='w-[90%] min-h-[calc(100vh-75px)] flex items-center mx-auto'>
