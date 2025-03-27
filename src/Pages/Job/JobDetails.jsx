@@ -136,7 +136,7 @@ const JobDetails = () => {
                         {/* Company Info */}
                         <div className='flex items-center justify-start gap-8 p-3'>
                             <div>
-                                <img src={singleJob.company_logo} className='border-1 p-1 border-gray-300 rounded-md' alt="" />
+                                <img src={singleJob.company_logo} className='border-1 p-1 border-gray-300 rounded-md w-[60px] h-[60px]' alt="" />
                             </div>
                             <div>
                                 <h1 className='text-[#05264e] text-2xl font-semibold'>{singleJob.company}</h1>
