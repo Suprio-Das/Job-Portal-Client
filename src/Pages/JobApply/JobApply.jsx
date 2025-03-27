@@ -2,9 +2,11 @@ import { FaDochub, FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsBroadcastPin } from "react-icons/bs";
 import { FaBook } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
 
 const JobApply = () => {
     const id = useParams();
+    const { user } = useAuth();
     const handleJobApplication = e => {
         e.preventDefault();
         const form = e.target;
