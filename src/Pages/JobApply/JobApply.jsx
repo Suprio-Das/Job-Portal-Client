@@ -13,6 +13,14 @@ const JobApply = () => {
         const linkedin = form.linkedin.value;
         const github = form.github.value;
         const resume = form.resume.value;
+
+        const jobApplication = {
+            job_id: id,
+            applicant_email: user.email,
+            linkedin,
+            github,
+            resume
+        }
     }
     return (
         <div className='w-[90%] min-h-[calc(100vh-75px)] flex items-center mx-auto'>
