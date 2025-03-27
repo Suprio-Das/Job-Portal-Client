@@ -1,8 +1,11 @@
 import { FaDochub, FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsBroadcastPin } from "react-icons/bs";
 import { FaBook } from "react-icons/fa6";
+import { useParams } from "react-router-dom";
 
 const JobApply = () => {
+    const { id } = useParams();
+    console.log(id);
     return (
         <div className='w-[90%] mx-auto  my-5'>
             <div className='w-2/3 shadow-sm p-5 mx-auto rounded-md'>
