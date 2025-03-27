@@ -19,6 +19,10 @@ const JobApply = () => {
                         <legend className="fieldset-legend">Github</legend>
                         <input type="text" className="input w-full" name='github' placeholder="Github Profile URL" />
                     </fieldset>
+                    <fieldset className="fieldset w-1/2">
+                        <legend className="fieldset-legend">Resume</legend>
+                        <input type="text" className="input w-full" name='resume' placeholder="Resume URL" />
+                    </fieldset>
                 </form>
             </div>
         </div>
