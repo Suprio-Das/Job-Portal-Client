@@ -1,10 +1,11 @@
 import { FaDochub, FaGithub, FaLinkedin } from "react-icons/fa";
+import { BsBroadcastPin } from "react-icons/bs";
 import { FaBook } from "react-icons/fa6";
 
 const JobApply = () => {
     return (
         <div className='w-[90%] mx-auto  my-5'>
-            <div className='w-2/3 shadow-sm p-5 mx-auto'>
+            <div className='w-2/3 shadow-sm p-5 mx-auto rounded-md'>
                 <div className='text-center'>
                     <h1 className='text-[#05264e] text-3xl font-semibold'>Job Application</h1>
                     <p>Apply and get a chance to Boost your career.</p>
@@ -24,6 +25,7 @@ const JobApply = () => {
                         <legend className="fieldset-legend"><FaBook className="-mr-1.5" />Resume</legend>
                         <input type="url" className="input w-full" name='resume' placeholder="Resume URL" />
                     </fieldset>
+                    <button className="btn w-1/2 bg-[#05264e] text-white my-3"><BsBroadcastPin /> Apply</button>
                 </form>
             </div>
         </div>
