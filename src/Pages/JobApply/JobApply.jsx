@@ -13,15 +13,15 @@ const JobApply = () => {
                 <form className='flex flex-col items-center justify-center mt-5'>
                     <fieldset className="fieldset w-1/2">
                         <legend className="fieldset-legend">Linkedin</legend>
-                        <input type="text" className="input w-full" name='linkedin' placeholder="Linkedin Profile URL" />
+                        <input type="url" className="input w-full" name='linkedin' placeholder="Linkedin Profile URL" />
                     </fieldset>
                     <fieldset className="fieldset w-1/2">
                         <legend className="fieldset-legend">Github</legend>
-                        <input type="text" className="input w-full" name='github' placeholder="Github Profile URL" />
+                        <input type="url" className="input w-full" name='github' placeholder="Github Profile URL" />
                     </fieldset>
                     <fieldset className="fieldset w-1/2">
                         <legend className="fieldset-legend">Resume</legend>
-                        <input type="text" className="input w-full" name='resume' placeholder="Resume URL" />
+                        <input type="url" className="input w-full" name='resume' placeholder="Resume URL" />
                     </fieldset>
                 </form>
             </div>
