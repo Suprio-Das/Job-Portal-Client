@@ -3,6 +3,7 @@ import { BsBroadcastPin } from "react-icons/bs";
 import { FaBook } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
+import Swal from "sweetalert2";
 
 const JobApply = () => {
     const id = useParams();
@@ -21,6 +22,23 @@ const JobApply = () => {
             github,
             resume
         }
+        fetch('http://localhost:5000/jobApplications', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(jobApplication)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: "Congrats!",
+                        text: "You have successfully submitted the application",
+                        icon: "success"
+                    });
+                }
+            })
     }
     return (
         <div className='w-[90%] min-h-[calc(100vh-75px)] flex items-center mx-auto'>
