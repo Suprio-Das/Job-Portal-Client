@@ -10,10 +10,14 @@ const JobApply = () => {
                 </div>
 
                 {/*------------------------------Application Form------------------------------*/}
-                <form className='flex justify-center mt-5'>
+                <form className='flex flex-col items-center justify-center mt-5'>
                     <fieldset className="fieldset w-1/2">
                         <legend className="fieldset-legend">Linkedin</legend>
                         <input type="text" className="input w-full" name='linkedin' placeholder="Linkedin Profile URL" />
+                    </fieldset>
+                    <fieldset className="fieldset w-1/2">
+                        <legend className="fieldset-legend">Github</legend>
+                        <input type="text" className="input w-full" name='linkedin' placeholder="Github Profile URL" />
                     </fieldset>
                 </form>
             </div>
