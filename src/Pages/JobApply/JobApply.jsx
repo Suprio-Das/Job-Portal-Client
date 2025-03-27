@@ -5,7 +5,15 @@ import { useParams } from "react-router-dom";
 
 const JobApply = () => {
     const { id } = useParams();
-    console.log(id);
+    const handleJobApplication = e => {
+        e.preventDefault();
+        const form = e.target;
+        const linkedin = form.linkedin.value;
+        const github = form.github.value;
+        const resume = form.resume.value;
+        const newApplication = { linkedin, github, resume };
+        console.log(newApplication);
+    }
     return (
         <div className='w-[90%] mx-auto  my-5'>
             <div className='w-2/3 shadow-sm p-5 mx-auto rounded-md'>
@@ -15,7 +23,7 @@ const JobApply = () => {
                 </div>
 
                 {/*------------------------------Application Form------------------------------*/}
-                <form className='flex flex-col items-center justify-center mt-5'>
+                <form className='flex flex-col items-center justify-center mt-5' onSubmit={handleJobApplication}>
                     <fieldset className="fieldset w-1/2">
                         <legend className="fieldset-legend"><FaLinkedin className="-mr-1.5" />LinkedIn</legend>
                         <input type="url" className="input w-full" name='linkedin' placeholder="Linkedin Profile URL" />
