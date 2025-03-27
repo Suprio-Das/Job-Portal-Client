@@ -1,4 +1,5 @@
-import React from 'react';
+import { FaDochub, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaBook } from "react-icons/fa6";
 
 const JobApply = () => {
     return (
@@ -12,15 +13,15 @@ const JobApply = () => {
                 {/*------------------------------Application Form------------------------------*/}
                 <form className='flex flex-col items-center justify-center mt-5'>
                     <fieldset className="fieldset w-1/2">
-                        <legend className="fieldset-legend">Linkedin</legend>
+                        <legend className="fieldset-legend"><FaLinkedin className="-mr-1.5" />LinkedIn</legend>
                         <input type="url" className="input w-full" name='linkedin' placeholder="Linkedin Profile URL" />
                     </fieldset>
                     <fieldset className="fieldset w-1/2">
-                        <legend className="fieldset-legend">Github</legend>
+                        <legend className="fieldset-legend"><FaGithub className="-mr-1.5" />GitHub</legend>
                         <input type="url" className="input w-full" name='github' placeholder="Github Profile URL" />
                     </fieldset>
                     <fieldset className="fieldset w-1/2">
-                        <legend className="fieldset-legend">Resume</legend>
+                        <legend className="fieldset-legend"><FaBook className="-mr-1.5" />Resume</legend>
                         <input type="url" className="input w-full" name='resume' placeholder="Resume URL" />
                     </fieldset>
                 </form>
