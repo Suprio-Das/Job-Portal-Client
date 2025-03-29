@@ -6,7 +6,8 @@ import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
 
 const JobApply = () => {
-    const id = useParams();
+    const { id } = useParams();
+    console.log(id);
     const { user } = useAuth();
     const handleJobApplication = e => {
         e.preventDefault();
