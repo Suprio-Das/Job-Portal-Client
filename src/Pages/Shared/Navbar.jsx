@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../Context/AuthContext/AuthContext';
-import { Bounce, toast, ToastContainer } from 'react-toastify';
 
 const Navbar = () => {
     const { user, signOutUser } = useContext(AuthContext);
@@ -11,8 +10,8 @@ const Navbar = () => {
         signOutUser()
     }
     const links = <>
-        <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/myApplications'>My Applications</Link></li>
     </>
     return (
         <div className='bg-base-100 shadow-sm'>
