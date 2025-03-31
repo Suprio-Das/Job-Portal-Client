@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import AuthContext from '../../Context/AuthContext/AuthContext';
 
 const Navbar = () => {
@@ -10,8 +10,8 @@ const Navbar = () => {
         signOutUser()
     }
     const links = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/myApplications'>My Applications</Link></li>
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/myApplications'>My Applications</NavLink></li>
     </>
     return (
         <div className='bg-base-100 shadow-sm'>
