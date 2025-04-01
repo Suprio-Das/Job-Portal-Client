@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MyApplicationsTable = ({ appliedJobs }) => {
     return (
@@ -37,7 +38,7 @@ const MyApplicationsTable = ({ appliedJobs }) => {
                                 </td>
                                 <td>{job.applicationDeadline}</td>
                                 <th>
-                                    <button className="btn btn-ghost btn-xs">Details</button>
+                                    <Link to={`/jobs/${job.job_id}`} className="btn btn-ghost btn-xs">Details</Link>
                                 </th>
                             </tr>
                         )
