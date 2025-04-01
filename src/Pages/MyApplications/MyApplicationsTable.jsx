@@ -27,19 +27,17 @@ const MyApplicationsTable = ({ appliedJobs }) => {
                                             </div>
                                         </div>
                                         <div>
-                                            <div className="font-bold">Hart Hagerty</div>
-                                            <div className="text-sm opacity-50">United States</div>
+                                            <div className="font-bold">{job.title}</div>
+                                            <div className="text-sm opacity-50">{job.location}</div>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    Zemlak, Daniel and Leannon
-                                    <br />
-                                    <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                                    {job.title}
                                 </td>
-                                <td>Purple</td>
+                                <td>{job.applicationDeadline}</td>
                                 <th>
-                                    <button className="btn btn-ghost btn-xs">details</button>
+                                    <button className="btn btn-ghost btn-xs">Details</button>
                                 </th>
                             </tr>
                         )
