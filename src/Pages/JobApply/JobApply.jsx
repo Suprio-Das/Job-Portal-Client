@@ -1,12 +1,13 @@
 import { FaDochub, FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsBroadcastPin } from "react-icons/bs";
 import { FaBook } from "react-icons/fa6";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
 
 const JobApply = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     console.log(id);
     const { user } = useAuth();
     const handleJobApplication = e => {
@@ -38,6 +39,7 @@ const JobApply = () => {
                         text: "You have successfully submitted the application",
                         icon: "success"
                     });
+                    navigate('/myApplications');
                 }
             })
     }
