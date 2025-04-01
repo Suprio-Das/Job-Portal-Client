@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MyApplicationsTable = () => {
+const MyApplicationsTable = ({ appliedJobs }) => {
     return (
         <div className="overflow-x-auto">
             <table className="table">

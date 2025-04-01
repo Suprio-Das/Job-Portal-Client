@@ -15,7 +15,7 @@ const MyApplications = () => {
     return (
         <div className="w-[90%] mx-auto">
             <h1 className='text-[#05264e] text-3xl text-center font-semibold my-5 flex justify-center items-center'>My Applications <RiVerifiedBadgeFill className="text-blue-500 ml-2" /> </h1>
-            <MyApplicationsTable></MyApplicationsTable>
+            <MyApplicationsTable appliedJobs={appliedJobs}></MyApplicationsTable>
         </div>
     );
 };
