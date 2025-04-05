@@ -1,4 +1,5 @@
-import React from 'react';
+import { FaRegPenToSquare } from "react-icons/fa6";
+import { MdDoNotDisturbAlt } from "react-icons/md";
 import { Link } from 'react-router-dom';
 
 const MyApplicationsTable = ({ appliedJobs }) => {
@@ -12,6 +13,7 @@ const MyApplicationsTable = ({ appliedJobs }) => {
                         <th>Job Title</th>
                         <th>Deadline</th>
                         <th>View Details</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody className='text-center'>
@@ -39,6 +41,10 @@ const MyApplicationsTable = ({ appliedJobs }) => {
                                 <td>{job.applicationDeadline}</td>
                                 <th>
                                     <Link to={`/jobs/${job.job_id}`} className="btn btn-ghost btn-xs">Details</Link>
+                                </th>
+                                <th>
+                                    <Link to={``} className="btn btn-ghost btn-xs bg-yellow-500"><FaRegPenToSquare />Update</Link>
+                                    <Link to={``} className="btn btn-ghost btn-xs bg-red-600 text-white ms-2"><MdDoNotDisturbAlt /> Delete</Link>
                                 </th>
                             </tr>
                         )
