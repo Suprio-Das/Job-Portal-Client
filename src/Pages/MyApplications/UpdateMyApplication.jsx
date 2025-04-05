@@ -30,15 +30,15 @@ const UpdateMyApplication = () => {
                 <form className='flex flex-col items-center justify-center mt-5' onSubmit={handleUpdateApplication}>
                     <fieldset className="fieldset lg:w-1/2 w-full">
                         <legend className="fieldset-legend "><FaLinkedin className="-mr-1.5" />LinkedIn</legend>
-                        <input type="url" className="input w-full" name='linkedin' placeholder="Linkedin Profile URL" />
+                        <input type="url" className="input w-full" name='linkedin' placeholder="Linkedin Profile URL" defaultValue={data.linkedin} />
                     </fieldset>
                     <fieldset className="fieldset lg:w-1/2 w-full">
                         <legend className="fieldset-legend"><FaGithub className="-mr-1.5" />GitHub</legend>
-                        <input type="url" className="input w-full" name='github' placeholder="Github Profile URL" />
+                        <input type="url" className="input w-full" name='github' placeholder="Github Profile URL" defaultValue={data.github} />
                     </fieldset>
                     <fieldset className="fieldset lg:w-1/2 w-full">
                         <legend className="fieldset-legend"><FaBook className="-mr-1.5" />Resume</legend>
-                        <input type="url" className="input w-full" name='resume' placeholder="Resume URL" />
+                        <input type="url" className="input w-full" name='resume' placeholder="Resume URL" defaultValue={data.resume} />
                     </fieldset>
                     <button className="btn lg:w-1/2 w-[260px] bg-[#05264e] text-white my-3"><BsBroadcastPin /> Update</button>
                 </form>
