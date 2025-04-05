@@ -5,7 +5,6 @@ import { useLoaderData } from "react-router-dom";
 
 const UpdateMyApplication = () => {
     const data = useLoaderData();
-    console.log(data);
     const handleUpdateApplication = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -13,12 +12,23 @@ const UpdateMyApplication = () => {
         const github = form.github.value;
         const resume = form.resume.value;
 
-        const jobApplication = {
+        const updateJobApplication = {
             linkedin,
             github,
             resume
         }
-        console.log(jobApplication);
+
+        fetch(`http://localhost:5000/jobApplication/${data._id}`, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(updateJobApplication)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
     }
     return (
         <div className='lg:w-[90%] w-full lg:min-h-[calc(100vh-75px)] flex items-center mx-auto'>
