@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { MdDoNotDisturbAlt } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import Swal from "sweetalert2";
 
 const MyApplicationsTable = ({ appliedJobs }) => {
+    const [loadedApplication, setLoadedApplication] = useState(appliedJobs);
     const handleDeleteApplication = id => {
         Swal.fire({
             title: "Are you sure?",
@@ -26,6 +28,8 @@ const MyApplicationsTable = ({ appliedJobs }) => {
                                 text: "Your application has been deleted.",
                                 icon: "success"
                             });
+                            const remaining = appliedJobs.filter(application => application._id !== id)
+                            setLoadedApplication(remaining);
                         }
                     })
             }
@@ -46,7 +50,7 @@ const MyApplicationsTable = ({ appliedJobs }) => {
                 </thead>
                 <tbody className='text-center'>
                     {
-                        appliedJobs.map((job, index) =>
+                        loadedApplication.map((job, index) =>
                             <tr key={index}>
                                 <td>
                                     <div className="flex justify-center items-center gap-3">
