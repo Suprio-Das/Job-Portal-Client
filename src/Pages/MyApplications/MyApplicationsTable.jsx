@@ -3,6 +3,9 @@ import { MdDoNotDisturbAlt } from "react-icons/md";
 import { Link } from 'react-router-dom';
 
 const MyApplicationsTable = ({ appliedJobs }) => {
+    const handleDeleteApplication = id => {
+        console.log(id);
+    }
     return (
         <div className="overflow-x-auto">
             <table className="table">
@@ -44,7 +47,7 @@ const MyApplicationsTable = ({ appliedJobs }) => {
                                 </th>
                                 <th>
                                     <Link to={`/updateApplication/${job._id}`} className="btn btn-ghost btn-xs bg-yellow-500"><FaRegPenToSquare />Update</Link>
-                                    <Link to={``} className="btn btn-ghost btn-xs bg-red-600 text-white ms-2"><MdDoNotDisturbAlt /> Delete</Link>
+                                    <button onClick={() => handleDeleteApplication(job._id)} className="btn btn-ghost btn-xs bg-red-600 text-white ms-2"><MdDoNotDisturbAlt /> Delete</button>
                                 </th>
                             </tr>
                         )
