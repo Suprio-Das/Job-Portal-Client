@@ -7,7 +7,17 @@ const UpdateMyApplication = () => {
     const id = useParams();
     const handleUpdateApplication = (e) => {
         e.preventDefault();
-        console.log(id);
+        const form = e.target;
+        const linkedin = form.linkedin.value;
+        const github = form.github.value;
+        const resume = form.resume.value;
+
+        const jobApplication = {
+            linkedin,
+            github,
+            resume
+        }
+        console.log(jobApplication);
     }
     return (
         <div className='lg:w-[90%] w-full lg:min-h-[calc(100vh-75px)] flex items-center mx-auto'>
@@ -29,7 +39,7 @@ const UpdateMyApplication = () => {
                         <legend className="fieldset-legend"><FaBook className="-mr-1.5" />Resume</legend>
                         <input type="url" className="input w-full" name='resume' placeholder="Resume URL" />
                     </fieldset>
-                    <button onClick={handleUpdateApplication} className="btn lg:w-1/2 w-[260px] bg-[#05264e] text-white my-3"><BsBroadcastPin /> Update</button>
+                    <button className="btn lg:w-1/2 w-[260px] bg-[#05264e] text-white my-3"><BsBroadcastPin /> Update</button>
                 </form>
             </div>
         </div>
