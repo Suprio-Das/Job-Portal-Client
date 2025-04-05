@@ -1,11 +1,12 @@
 import { FaDochub, FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsBroadcastPin } from "react-icons/bs";
 import { FaBook } from "react-icons/fa6";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateMyApplication = () => {
     const data = useLoaderData();
+    const navigate = useNavigate();
     const handleUpdateApplication = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -34,6 +35,10 @@ const UpdateMyApplication = () => {
                         text: "You have successfully updated the application",
                         icon: "success"
                     });
+
+                    setTimeout(() => {
+                        navigate('/myApplications');
+                    }, [1000])
                 }
             })
     }
