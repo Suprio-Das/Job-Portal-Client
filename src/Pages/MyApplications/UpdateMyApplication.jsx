@@ -1,10 +1,11 @@
 import { FaDochub, FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsBroadcastPin } from "react-icons/bs";
 import { FaBook } from "react-icons/fa6";
-import { useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const UpdateMyApplication = () => {
-    const id = useParams();
+    const data = useLoaderData();
+    console.log(data);
     const handleUpdateApplication = (e) => {
         e.preventDefault();
         const form = e.target;
