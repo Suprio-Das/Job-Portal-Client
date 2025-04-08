@@ -53,7 +53,7 @@ const router = createBrowserRouter([
                 element: <UpdateMyApplication></UpdateMyApplication>
             },
             {
-                path: '/addNewJob',
+                path: '/addJobPost',
                 element: <PrivateRoutes>
                     <AddJobPost></AddJobPost>
                 </PrivateRoutes>
