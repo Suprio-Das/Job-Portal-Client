@@ -2,8 +2,8 @@ import React from 'react';
 
 const AddJobPost = () => {
     return (
-        <div>
-            <h1>This is Job Posting Page.</h1>
+        <div className='w-[90%] mx-auto'>
+            <h1>This is Add Job Post.</h1>
         </div>
     );
 };

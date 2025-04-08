@@ -50,7 +50,9 @@ const router = createBrowserRouter([
             {
                 path: '/updateApplication/:id',
                 loader: ({ params }) => fetch(`http://localhost:5000/jobApplication/${params.id}`),
-                element: <UpdateMyApplication></UpdateMyApplication>
+                element: <PrivateRoutes>
+                    <UpdateMyApplication></UpdateMyApplication>
+                </PrivateRoutes>
             },
             {
                 path: '/addJobPost',
