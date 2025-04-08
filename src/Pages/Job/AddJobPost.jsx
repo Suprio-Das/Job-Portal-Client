@@ -35,45 +35,27 @@ const AddJobPost = () => {
                     </fieldset>
                 </div>
                 {/*Job Type and Salary*/}
-                <div className='grid grid-cols-3 gap-3 col-span-1'>
-                    {/* Job Type */}
-                    <div>
-                        <fieldset className="fieldset">
-                            <legend className="fieldset-legend">Select Job Type</legend>
-                            <select defaultValue="Pick a Category" className="select w-full" name='type'>
-                                <option disabled={true}>Pick a Type</option>
-                                <option>Full-Time</option>
-                                <option>Part-Time</option>
-                                <option>Intern</option>
-                                <option>Remote</option>
-                                <option>Hybrid</option>
-                            </select>
-                        </fieldset>
-                    </div>
+                <div className='grid grid-cols-3 gap-3'>
                     {/* Salary */}
-                    <div className='col-span-2'>
-                        <div className='flex justify-around items-center gap-3'>
-                            <fieldset className="fieldset w-full">
-                                <legend className="fieldset-legend">Min Salary</legend>
-                                <input type="text" className="input w-full" name='min' placeholder="Type Minimum Salary Here" />
-                            </fieldset>
-                            <fieldset className="fieldset w-full">
-                                <legend className="fieldset-legend">Max Salary</legend>
-                                <input type="text" className="input w-full" name='max' placeholder="Type Maximum Salary Here" />
-                            </fieldset>
-                            <fieldset className="fieldset w-full">
-                                <legend className="fieldset-legend">Select Currency</legend>
-                                <select defaultValue="Pick a Category" className="select w-full" name='currency'>
-                                    <option disabled={true}>Pick a Currency</option>
-                                    <option>BDT</option>
-                                    <option>USD</option>
-                                    <option>EUR</option>
-                                    <option>CAD</option>
-                                    <option>RS</option>
-                                </select>
-                            </fieldset>
-                        </div>
-                    </div>
+                    <fieldset className="fieldset w-full">
+                        <legend className="fieldset-legend">Min Salary</legend>
+                        <input type="text" className="input w-full" name='min' placeholder="Type Minimum Salary Here" />
+                    </fieldset>
+                    <fieldset className="fieldset w-full">
+                        <legend className="fieldset-legend">Max Salary</legend>
+                        <input type="text" className="input w-full" name='max' placeholder="Type Maximum Salary Here" />
+                    </fieldset>
+                    <fieldset className="fieldset w-full">
+                        <legend className="fieldset-legend">Select Currency</legend>
+                        <select defaultValue="Pick a Category" className="select w-full" name='currency'>
+                            <option disabled={true}>Pick a Currency</option>
+                            <option>BDT</option>
+                            <option>USD</option>
+                            <option>EUR</option>
+                            <option>CAD</option>
+                            <option>RS</option>
+                        </select>
+                    </fieldset>
                 </div>
             </form>
         </div>
