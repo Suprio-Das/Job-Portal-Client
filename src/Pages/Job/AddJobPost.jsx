@@ -21,7 +21,7 @@ const AddJobPost = () => {
                     </fieldset>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Select Job Category</legend>
-                        <select defaultValue="Pick a Category" className="select">
+                        <select defaultValue="Pick a Category" className="select" name='category'>
                             <option disabled={true}>Pick a Category</option>
                             <option>Engineering</option>
                             <option>Marketing</option>
@@ -34,7 +34,21 @@ const AddJobPost = () => {
                         </select>
                     </fieldset>
                 </div>
-                {/*  */}
+                {/*Job Type and Salary*/}
+                <div className='grid grid-cols-3 gap-3'>
+                    {/* Job Type */}
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend">Select Job Type</legend>
+                        <select defaultValue="Pick a Category" className="select w-full" name='type'>
+                            <option disabled={true}>Pick a Type</option>
+                            <option>Full-Time</option>
+                            <option>Part-Time</option>
+                            <option>Intern</option>
+                            <option>Remote</option>
+                            <option>Hybrid</option>
+                        </select>
+                    </fieldset>
+                </div>
             </form>
         </div>
     );
