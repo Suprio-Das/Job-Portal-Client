@@ -10,7 +10,7 @@ const AddJobPost = () => {
             {/* ---------------------------------Add New Job Form--------------------------------- */}
             <form>
                 {/* Job Title , Location , Category */}
-                <div className='grid grid-cols-3 gap-3'>
+                <div className='grid grid-cols-3 gap-3 mb-5'>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Job Title</legend>
                         <input type="text" className="input w-full" name='title' placeholder="Type Job Title Here" />
@@ -20,10 +20,21 @@ const AddJobPost = () => {
                         <input type="text" className="input w-full" name='location' placeholder="Type Job Location Here" />
                     </fieldset>
                     <fieldset className="fieldset">
-                        <legend className="fieldset-legend">Category</legend>
-                        <input type="text" className="input w-full" name='category' placeholder="e.g. Engineering, Marketing etc." />
+                        <legend className="fieldset-legend">Select Job Category</legend>
+                        <select defaultValue="Pick a Category" className="select">
+                            <option disabled={true}>Pick a Category</option>
+                            <option>Engineering</option>
+                            <option>Marketing</option>
+                            <option>Design</option>
+                            <option>Development</option>
+                            <option>Teaching</option>
+                            <option>Management</option>
+                            <option>Data Science</option>
+                            <option>Health</option>
+                        </select>
                     </fieldset>
                 </div>
+                {/*  */}
             </form>
         </div>
     );
