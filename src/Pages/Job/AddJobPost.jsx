@@ -13,15 +13,15 @@ const AddJobPost = () => {
                 <div className='grid grid-cols-3 gap-3 mb-5'>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Job Title</legend>
-                        <input type="text" className="input w-full" name='title' placeholder="Type Job Title Here" />
+                        <input type="text" className="input w-full" name='title' placeholder="Type Job Title Here" required />
                     </fieldset>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Location</legend>
-                        <input type="text" className="input w-full" name='location' placeholder="Type Job Location Here" />
+                        <input type="text" className="input w-full" name='location' placeholder="Type Job Location Here" required />
                     </fieldset>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Select Job Category</legend>
-                        <select defaultValue="Pick a Category" className="select" name='category'>
+                        <select defaultValue="Pick a Category" className="select" name='category' required>
                             <option disabled={true}>Pick a Category</option>
                             <option>Engineering</option>
                             <option>Marketing</option>
@@ -39,15 +39,15 @@ const AddJobPost = () => {
                     {/* Salary */}
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Min Salary</legend>
-                        <input type='number' className="input w-full" name='min' placeholder="Type Minimum Salary Here" />
+                        <input type='number' className="input w-full" name='min' placeholder="Type Minimum Salary Here" required />
                     </fieldset>
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Max Salary</legend>
-                        <input type='number' className="input w-full" name='max' placeholder="Type Maximum Salary Here" />
+                        <input type='number' className="input w-full" name='max' placeholder="Type Maximum Salary Here" required />
                     </fieldset>
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Select Currency</legend>
-                        <select defaultValue="Pick a Category" className="select w-full" name='currency'>
+                        <select defaultValue="Pick a Category" className="select w-full" name='currency' required>
                             <option disabled={true}>Pick a Currency</option>
                             <option>BDT</option>
                             <option>USD</option>
@@ -61,7 +61,7 @@ const AddJobPost = () => {
                 <div className='grid grid-cols-3 gap-3 mb-5'>
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Select Job Type</legend>
-                        <select defaultValue="Pick a Type" className="select w-full" name='type'>
+                        <select defaultValue="Pick a Type" className="select w-full" name='type' required>
                             <option disabled={true}>Pick a Type</option>
                             <option>Full-Time</option>
                             <option>Part-Time</option>
@@ -72,11 +72,11 @@ const AddJobPost = () => {
                     </fieldset>
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Select Application Deadline</legend>
-                        <input type="date" className="input w-full" name='deadline' />
+                        <input type="date" className="input w-full" name='deadline' required />
                     </fieldset>
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Select Job Status</legend>
-                        <select defaultValue="Pick a Type" className="select w-full" name='status'>
+                        <select defaultValue="Pick a Type" className="select w-full" name='status' required>
                             <option>Active</option>
                             <option>Inactive</option>
                         </select>
