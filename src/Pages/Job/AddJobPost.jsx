@@ -39,11 +39,11 @@ const AddJobPost = () => {
                     {/* Salary */}
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Min Salary</legend>
-                        <input type="text" className="input w-full" name='min' placeholder="Type Minimum Salary Here" />
+                        <input type='number' className="input w-full" name='min' placeholder="Type Minimum Salary Here" />
                     </fieldset>
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Max Salary</legend>
-                        <input type="text" className="input w-full" name='max' placeholder="Type Maximum Salary Here" />
+                        <input type='number' className="input w-full" name='max' placeholder="Type Maximum Salary Here" />
                     </fieldset>
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Select Currency</legend>
@@ -57,7 +57,7 @@ const AddJobPost = () => {
                         </select>
                     </fieldset>
                 </div>
-                {/* Job type and deadline */}
+                {/* Job type,deadline and status */}
                 <div className='grid grid-cols-3 gap-3 mb-5'>
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Select Job Type</legend>
