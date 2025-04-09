@@ -70,6 +70,10 @@ const AddJobPost = () => {
                             <option>Hybrid</option>
                         </select>
                     </fieldset>
+                    <fieldset className="fieldset w-full">
+                        <legend className="fieldset-legend">Select Application Deadline</legend>
+                        <input type="date" className="input w-full" />
+                    </fieldset>
                 </div>
             </form>
         </div>
