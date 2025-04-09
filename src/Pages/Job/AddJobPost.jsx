@@ -58,7 +58,7 @@ const AddJobPost = () => {
                     </fieldset>
                 </div>
                 {/* Job type and deadline */}
-                <div className='grid grid-cols-2 gap-3 mb-5'>
+                <div className='grid grid-cols-3 gap-3 mb-5'>
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Select Job Type</legend>
                         <select defaultValue="Pick a Type" className="select w-full" name='type'>
@@ -73,6 +73,13 @@ const AddJobPost = () => {
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Select Application Deadline</legend>
                         <input type="date" className="input w-full" name='deadline' />
+                    </fieldset>
+                    <fieldset className="fieldset w-full">
+                        <legend className="fieldset-legend">Select Job Status</legend>
+                        <select defaultValue="Pick a Type" className="select w-full" name='status'>
+                            <option>Active</option>
+                            <option>Inactive</option>
+                        </select>
                     </fieldset>
                 </div>
             </form>
