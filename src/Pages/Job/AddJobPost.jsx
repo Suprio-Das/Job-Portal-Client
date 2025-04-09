@@ -35,7 +35,7 @@ const AddJobPost = () => {
                     </fieldset>
                 </div>
                 {/*Job Salary*/}
-                <div className='grid grid-cols-3 gap-3'>
+                <div className='grid grid-cols-3 gap-3 mb-5'>
                     {/* Salary */}
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Min Salary</legend>
@@ -58,7 +58,7 @@ const AddJobPost = () => {
                     </fieldset>
                 </div>
                 {/* Job type and deadline */}
-                <div>
+                <div className='grid grid-cols-2 gap-3 mb-5'>
                     <fieldset className="fieldset w-full">
                         <legend className="fieldset-legend">Select Job Type</legend>
                         <select defaultValue="Pick a Type" className="select w-full" name='type'>
