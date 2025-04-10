@@ -83,7 +83,7 @@ const AddJobPost = () => {
                     </fieldset>
                 </div>
                 {/* Job Description */}
-                <div>
+                <div className='mb-5'>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Job Description</legend>
                         <textarea className="textarea w-full h-24" name='description' placeholder="Write Job Description Here..."></textarea>
