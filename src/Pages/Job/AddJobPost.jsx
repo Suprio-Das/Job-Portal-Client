@@ -95,6 +95,10 @@ const AddJobPost = () => {
                         <legend className="fieldset-legend">Company Name</legend>
                         <input type="text" className="input w-full" name='company_name' placeholder="Type Company Name Here" required />
                     </fieldset>
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend">Company Logo</legend>
+                        <input type="file" className="file-input w-full" required />
+                    </fieldset>
                 </div>
             </form>
         </div>
