@@ -90,7 +90,7 @@ const AddJobPost = () => {
                     </fieldset>
                 </div>
                 {/* Company Name , email and Logo */}
-                <div className='grid grid-cols-3 gap-3'>
+                <div className='grid grid-cols-3 gap-3 mb-5'>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Company Name</legend>
                         <input type="text" className="input w-full" name='company_name' placeholder="Type Company Name Here" required />
