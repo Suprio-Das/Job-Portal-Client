@@ -82,6 +82,13 @@ const AddJobPost = () => {
                         </select>
                     </fieldset>
                 </div>
+                {/* Job Description */}
+                <div>
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend">Job Description</legend>
+                        <textarea className="textarea w-full h-24" name='description' placeholder="Write Job Description Here..."></textarea>
+                    </fieldset>
+                </div>
             </form>
         </div>
     );
