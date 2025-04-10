@@ -86,7 +86,7 @@ const AddJobPost = () => {
                 <div className='mb-5'>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Job Description</legend>
-                        <textarea className="textarea w-full h-24" name='description' placeholder="Write Job Description Here..."></textarea>
+                        <textarea className="textarea w-full h-24" name='description' placeholder="Write Job Description Here..." required></textarea>
                     </fieldset>
                 </div>
             </form>
