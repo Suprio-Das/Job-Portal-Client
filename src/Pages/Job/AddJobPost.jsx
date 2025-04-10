@@ -89,6 +89,13 @@ const AddJobPost = () => {
                         <textarea className="textarea w-full h-24" name='description' placeholder="Write Job Description Here..." required></textarea>
                     </fieldset>
                 </div>
+                {/* Company Name and Logo */}
+                <div>
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend">Company Name</legend>
+                        <input type="text" className="input w-full" name='company_name' placeholder="Type Company Name Here" required />
+                    </fieldset>
+                </div>
             </form>
         </div>
     );
