@@ -21,7 +21,7 @@ const AddJobPost = () => {
                     </fieldset>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Select Job Category</legend>
-                        <select defaultValue="Pick a Category" className="select" name='category' required>
+                        <select defaultValue="Pick a Category" className="select w-full" name='category' required>
                             <option disabled={true}>Pick a Category</option>
                             <option>Engineering</option>
                             <option>Marketing</option>
