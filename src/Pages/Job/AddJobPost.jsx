@@ -90,17 +90,19 @@ const AddJobPost = () => {
                     </fieldset>
                 </div>
                 {/* Job Requirements and Responsibilities */}
-                <div className='mb-5'>
-                    <fieldset className="fieldset">
-                        <legend className="fieldset-legend">Job Requirements</legend>
-                        <textarea className="textarea w-full h-24" name='requirements' placeholder="e.g. Javascript, React, Node JS, ..." required></textarea>
-                    </fieldset>
-                </div>
-                <div className='mb-5'>
-                    <fieldset className="fieldset">
-                        <legend className="fieldset-legend">Job Responsibilities</legend>
-                        <textarea className="textarea w-full h-24" name='responsibilities' placeholder="e.g. Develop and maintain software, Collaborate with the team, Participate in code reviews, ..." required></textarea>
-                    </fieldset>
+                <div className='grid grid-cols-2 gap-3 mb-5'>
+                    <div className='mb-5'>
+                        <fieldset className="fieldset">
+                            <legend className="fieldset-legend">Job Requirements</legend>
+                            <textarea className="textarea w-full h-24" name='requirements' placeholder="e.g. Javascript, React, Node JS, ..." required></textarea>
+                        </fieldset>
+                    </div>
+                    <div className='mb-5'>
+                        <fieldset className="fieldset">
+                            <legend className="fieldset-legend">Job Responsibilities</legend>
+                            <textarea className="textarea w-full h-24" name='responsibilities' placeholder="e.g. Develop and maintain software, Collaborate with the team, Participate in code reviews, ..." required></textarea>
+                        </fieldset>
+                    </div>
                 </div>
                 {/* Company Name , email and Logo */}
                 <div className='grid grid-cols-3 gap-3 mb-5'>
@@ -114,7 +116,7 @@ const AddJobPost = () => {
                     </fieldset>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Company Logo</legend>
-                        <input type="file" className="file-input w-full" required />
+                        <input type="text" className="input w-full" placeholder='Enter Company Logo URL' required />
                     </fieldset>
                 </div>
             </form>
