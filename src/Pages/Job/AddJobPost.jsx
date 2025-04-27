@@ -123,6 +123,7 @@ const AddJobPost = () => {
                         <input type="text" className="input w-full" placeholder='Enter Company Logo URL' required />
                     </fieldset>
                 </div>
+                <input type="submit" value="Add Job" className='btn w-full' />
             </form>
         </div>
     );
